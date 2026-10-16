@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="reserve-style.css">
+    <link rel="stylesheet" href="rr-style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+            <a href="#"><img src="logo.png" alt="Hiraya Hotels" class="logo-nav"></a>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="aminities.html">Amenities</a></li>
+            <li><a href="room-rate.html">Room Rate</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+
+<div class="banner-reservation">
+    <img src="Receptiondesk.jpeg" alt="reservation" class="banner-rr">
+    <div class="banner-text">
+        <h1>Book your stay at Hiraya Hotel</h1>
+    </div>
+</div>
+
+<main class="reservation-container">
+    <h2 id="formcaption">Reserve your room</h2>
+    <p class="form-intro">Fill in your details, pick your dates and choose a room. All fields are required unless marked optional.</p>
+
+    <form class="reservations-form" action="thank-you.html" method="get">
+
+        <div class="form-main">
+
+            <fieldset class="form-section">
+                <legend>Guest details</legend>
+
+                <div class="row two">
+                    <div class="field">
+                        <label for="firstname">First name</label>
+                        <input type="text" id="firstname" name="firstname" autocomplete="given-name" required>
+                    </div>
+                    <div class="field">
+                        <label for="lastname">Last name</label>
+                        <input type="text" id="lastname" name="lastname" autocomplete="family-name" required>
+                    </div>
+                </div>
+
+                <div class="row two">
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="name@gmail.com" autocomplete="email" required>
+                    </div>
+                    <div class="field">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+63 912 345 6789" inputmode="tel" autocomplete="tel" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="address">Home address</label>
+                    <input type="text" id="address" name="address" autocomplete="street-address" required>
+                </div>
+
+                <div class="row three">
+                    <div class="field">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" autocomplete="address-level2" required>
+                    </div>
+                    <div class="field">
+                        <label for="state">State / Province</label>
+                        <input type="text" id="state" name="state" autocomplete="address-level1" required>
+                    </div>
+                    <div class="field">
+                        <label for="postal-code">Postal / Zip code</label>
+                        <input type="text" id="postal-code" name="postal-code" autocomplete="postal-code" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="country">Country</label>
+                    <select id="country" name="country" autocomplete="country" required>
+                        <option value="" disabled selected>Select a country</option>
+                        <option value="US">United States</option>
+                        <option value="CA">Canada</option>
+                        <option value="GB">United Kingdom</option>
+                        <option value="AU">Australia</option>
+                        <option value="PH">Philippines</option>
+                        <option value="FR">France</option>
+                        <option value="JP">Japan</option>
+                        <option value="IN">India</option>
+                        <option value="BR">Brazil</option>
+                        <option value="CN">China</option>
+                        <option value="SG">Singapore</option>
+                        <option value="KR">South Korea</option>
+                        <option value="AE">United Arab Emirates</option>
+                        <option value="DE">Germany</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-section">
+                <legend>Your stay</legend>
+
+                <div class="row two">
+                    <div class="field">
+                        <label for="check-in">Check-in date</label>
+                        <input type="date" id="check-in" name="check-in" required>
+                    </div>
+                    <div class="field">
+                        <label for="check-out">Check-out date</label>
+                        <input type="date" id="check-out" name="check-out" required>
+                    </div>
+                </div>
+
+                <div class="row two">
+                    <div class="field">
+                        <label for="adults">Adults</label>
+                        <select id="adults" name="adults" required>
+                            <option value="1">1</option>
+                            <option value="2" selected>2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="children">Children</label>
+                        <select id="children" name="children">
+                            <option value="0" selected>0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="requests">Special requests <span class="optional">(optional)</span></label>
+                    <textarea id="requests" name="requests" rows="3" placeholder="Late arrival, extra pillows, anniversary surprise..."></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-section">
+                <legend>Choose a room</legend>
+
+                <div class="room-choices">
+
+                    <div class="room-option">
+                        <input type="radio" id="room-single" name="room" value="single" required>
+                        <label for="room-single" class="room-label">
+                            <img src="Single.jpeg" alt="Single room" class="Sroom-image">
+                            <span class="room-name">Single Room</span>
+                            <span class="room-short">Private room with a terrace, made for one.</span>
+                        </label>
+                    </div>
+
+                    <div class="room-option">
+                        <input type="radio" id="room-double" name="room" value="double">
+                        <label for="room-double" class="room-label">
+                            <img src="double.jpeg" alt="Double room" class="Droom-image">
+                            <span class="room-name">Double Room</span>
+                            <span class="room-short">Standard room with a terrace and hill or pool views.</span>
+                        </label>
+                    </div>
+
+                    <div class="room-option">
+                        <input type="radio" id="room-suite" name="room" value="suite">
+                        <label for="room-suite" class="room-label">
+                            <img src="Family.jpeg" alt="Hotel suite" class="SUroom-image">
+                            <span class="room-name">Suite</span>
+                            <span class="room-short">Junior suite with a balcony, sofa and Nespresso machine.</span>
+                        </label>
+                    </div>
+
+                </div>
+            </fieldset>
+
+        </div>
+
+        <button type="submit" class="btn-reserve">Reserve</button>
+
+    </form>
+</main>
+
+</body>
+</html>
